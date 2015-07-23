@@ -39,6 +39,10 @@ BOARD_SYSTEMIMAGE_PARTITION_SIZE := 1258291200
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 1711276032
 BOARD_CACHEIMAGE_PARTITION_SIZE := 268435456
 
+# Quickboot
+PRODUCT_COPY_FILES += \
+device/sony/taoshan/prebuilt/QuickBoot.apk:system/app/QuickBoot/QuickBoot.apk
+
 BOARD_EGL_CFG := device/sony/taoshan/rootdir/system/lib/egl/egl.cfg
 
 BOARD_VOLD_MAX_PARTITIONS := 33
