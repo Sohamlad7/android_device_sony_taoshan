@@ -1,3 +1,1 @@
-allow mediaserver audio_device:chr_file { ioctl open read write };
-allow mediaserver camera_device:chr_file { ioctl open read write };
 allow mediaserver system_file:file execmod;
