@@ -26,9 +26,9 @@ export VENDOR=sony
 MY_DIR="${BASH_SOURCE%/*}"
 if [[ ! -d "$MY_DIR" ]]; then MY_DIR="$PWD"; fi
 
-ROM_ROOT="$MY_DIR"/../../..
+LINEAGE_ROOT="$MY_DIR"/../../..
 
-HELPER="$ROM_ROOT"/vendor/cm/build/tools/extract_utils.sh
+HELPER="$LINEAGE_ROOT"/vendor/lineage/build/tools/extract_utils.sh
 if [ ! -f "$HELPER" ]; then
     echo "Unable to find helper script at $HELPER"
     exit 1
@@ -52,7 +52,7 @@ else
 fi
 
 # Initialize the helper for device
-setup_vendor "$DEVICE" "$VENDOR" "$ROM_ROOT"
+setup_vendor "$DEVICE" "$VENDOR" "$LINEAGE_ROOT"
 
 # Blobs
 extract "$MY_DIR"/proprietary-files.txt "$SRC"
